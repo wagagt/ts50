@@ -115,7 +115,9 @@ class ProyectosController extends AppBaseController
 			//$comentarios->setPath('http://ts50-wagagt.c9.io/proyectos/'.$id);
 			$comentarios->setPath($request->url());
 			
-			return view('proyectos.client-show')
+			$proyectosShow = ($isAdmin=='true')? 'proyectos.admin-show' : 'proyectos.client-show';
+			
+			return view($proyectosShow)
 			->with('proyectos',$proyectos)
 			->with('proyecto',$proyecto)
 			->with('comentarios', $comentarios)
