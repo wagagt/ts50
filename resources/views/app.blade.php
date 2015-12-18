@@ -42,7 +42,7 @@ desired effect
         <!-- Main content -->
         <section class="content">
             <!-- Your Page Content Here -->
-            @yield('main-content')
+            @yield('content')
         </section><!-- /.content -->
     </div><!-- /.content-wrapper -->
 

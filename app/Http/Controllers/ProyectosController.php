@@ -117,7 +117,9 @@ class ProyectosController extends AppBaseController
 			->with('proyectos',$proyectos)
 			->with('proyecto',$proyecto)
 			->with('comentarios', $comentarios)
-			->with('isAdmin', $isAdmin);
+			->with('isAdmin', $isAdmin)
+			->with('title','Detalle de Proyecto: ')
+			->with('subTitle', $proyecto->nombre);
 	}
 
 	/**

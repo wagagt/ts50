@@ -17,7 +17,7 @@ public function run()
       'id_rol'=>'2', 'id_cliente'=>'2', 'created_at' => new DateTime
      ],
      ['name' => 'diegogt', 'contact_fname' => 'Diego', 'contact_lname' => 'Gonzalez', // usuario
-      'email' => 'diegogt@gmail.com', 'password' => Hash::make("fabio15"), 
+      'email' => 'diegogt@gmail.com', 'password' => Hash::make("diego15"), 
       'id_rol'=>'2', 'id_cliente'=>'3', 'created_at' => new DateTime
      ]
     ];

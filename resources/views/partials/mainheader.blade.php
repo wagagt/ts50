@@ -4,9 +4,9 @@
     <!-- Logo -->
     <a href="{{ url('/home') }}" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>A</b>LT</span>
+        <span class="logo-mini"><b>TS</b></span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>Admin</b>LTE Laravel </span>
+        <span class="logo-lg"><b></b>TierraSegura </span>
     </a>
 
     <!-- Header Navbar -->
@@ -126,7 +126,7 @@
                                 <small>Member since Nov. 2012</small>
                             </p>
                         </li>
-                        <!-- Menu Body -->
+                        <!-- Menu Body 
                         <li class="user-body">
                             <div class="col-xs-4 text-center">
                                 <a href="#">Followers</a>
@@ -138,13 +138,13 @@
                                 <a href="#">Friends</a>
                             </div>
                         </li>
-                        <!-- Menu Footer-->
+                         Menu Footer-->
                         <li class="user-footer">
-                            <div class="pull-left">
-                                <a href="#" class="btn btn-default btn-flat">Profile</a>
-                            </div>
+                            <!--<div class="pull-left">-->
+                            <!--    <a href="#" class="btn btn-default btn-flat">Perfil</a>-->
+                            <!--</div>-->
                             <div class="pull-right">
-                                <a href="{{ url('/auth/logout') }}" class="btn btn-default btn-flat">Sign out</a>
+                                <a href="{{ url('/auth/logout') }}" class="btn btn-danger btn-flat">Salir</a>
                             </div>
                         </li>
                     </ul>

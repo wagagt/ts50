@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-    <title>Login</title>
+    <title>TierraSegura</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.2 -->
     <link href="{{ asset('/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />    
@@ -14,7 +14,7 @@
     <link href="{{ asset('/dist/css/AdminLTE.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- AdminLTE Skins. Choose a skin from the css/skins 
          folder instead of downloading all of them to reduce the load. -->
-    <link href="{{ asset('/dist/css/skins/_all-skins.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('/dist/css/skins/_all-skins.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- iCheck -->
     <link href="{{ asset('/plugins/iCheck/flat/blue.css') }}" rel="stylesheet" type="text/css" />
     <!-- Morris chart -->
@@ -56,7 +56,7 @@
                 <div class="pull-right hidden-xs">
                     <b>Version</b> 2.0
                 </div>
-                <strong>Copyright &copy; 2014-2015.</strong> All rights reserved.
+                <strong>Copyright &copy; 2014-2015 <a href="http://tierrasegura.com">TierraSegura.</a>.</strong> All rights reserved.
             </footer>
         </div><!-- ./wrapper -->
  
