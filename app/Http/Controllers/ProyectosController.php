@@ -99,7 +99,7 @@ class ProyectosController extends AppBaseController
 	 *
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($id, Request $request)
 	{
 		$proyecto = $this->proyectosRepository->findProyectosById($id);
 		//dd($proyecto);
@@ -112,7 +112,9 @@ class ProyectosController extends AppBaseController
  			$isAdmin 		= (\Auth::user()->id_rol == 1 )? 'true' : 'false';
 			$proyectos 		= \DB::table('proyectos')->where('id_cliente',\Auth::user()->id_cliente)->get();
 			$comentarios 	= \DB::table('comentarios')->where('id_proyecto', $id)->orderBy('created_at', 'desc')->paginate(25);
-			$comentarios->setPath('http://ts50-wagagt.c9.io/proyectos/'.$id);
+			//$comentarios->setPath('http://ts50-wagagt.c9.io/proyectos/'.$id);
+			$comentarios->setPath($request->url());
+			
 			return view('proyectos.client-show')
 			->with('proyectos',$proyectos)
 			->with('proyecto',$proyecto)
