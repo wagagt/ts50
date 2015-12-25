@@ -37,7 +37,7 @@
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h4 class="modal-title" id="myModalLabel">Agregar Comentario a Proyecto:  <strong>{!! $proyecto->nombre !!}</strong></h4>
           </div>
-          <div class="modal-body">
+          <div class="modal-body"> ADMIN SHOW
             {!! Form::open(['route' => 'comentarios.store']) !!}
                 <!--- Avance Field --->
                 <div class="row">
@@ -55,7 +55,7 @@
                 <div class="row">
                     <div class="form-group col-sm-6 col-lg-12">
                         {!! Form::label('comentario', 'Comentario:') !!}
-                        {!! Form::textarea('comentario', null, ['class' => 'form-control', 'size' => '50x5']) !!}
+                        {!! Form::textarea('comentario', null, ['class' => 'form-control col-sm-4 col-lg-6', 'size' => '50x5']) !!}
                     </div>
                 </div>
                 <!--- Id Usuario Field --->

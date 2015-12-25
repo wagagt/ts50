@@ -18,7 +18,7 @@
                     <td>{{$comentario->created_at}}</td>
                     <td>{{$comentario->avance}}</td>
                     <td>{{$comentario->horas}}</td>
-                    <td><textarea rows="2" cols="75">{{$comentario->comentario}}</textarea></td>                                       
+                    <td><textarea rows="2" class ="form-control col-sm-4 col-lg-6" >w{{$comentario->comentario}}</textarea></td>                                       
                 </tr>
                 @endforeach
               </tbody>
