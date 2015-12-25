@@ -35,14 +35,13 @@ class ComentariosController extends AppBaseController
 	public function index(Request $request)
 	{
 	    $input = $request->all();
-
 		// $result = $this->comentariosRepository->search($input);
 		// //dd($result[0][0]->proyecto->cliente->nombre);
 		// $comentarios = $result[0];
 		// $attributes = $result[1];
-		$comentarios = \DB::table('comentarios')->paginate(25);
+		$comentarios = \DB::table('comentarios')->orderBy('created_at', 'desc')->paginate(25);
 		//$comentarios = \Comentarios::paginate(25);
-		$comentarios->setPath('http://ts50-wagagt.c9.io/comentarios');
+		$comentarios->setPath($request->url());
 
 		return view('comentarios.index')
 		    ->with('comentarios', $comentarios);
@@ -72,11 +71,12 @@ class ComentariosController extends AppBaseController
 	public function store(CreateComentariosRequest $request)
 	{
         $input = $request->all();
-
-		//dd($input);
 		$comentarios = $this->comentariosRepository->store($input);
+		Flash::message('Comentarios agregados exitosamente.');
 
-		Flash::message('Comentarios saved successfully.');
+		if (isset($input['pathReturn']) && $input['pathReturn']=='proyecto'){
+			return redirect('proyectos/'.$input['id_proyecto'] );
+		}
 
 		return redirect(route('comentarios.index'));
 	}

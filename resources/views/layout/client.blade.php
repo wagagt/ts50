@@ -60,6 +60,7 @@ desired effect
 </div><!-- ./wrapper -->
 
 @include('partials.scripts')
+ @yield('script')
 
 </body>
 </html>
