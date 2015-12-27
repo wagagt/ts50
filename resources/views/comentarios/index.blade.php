@@ -6,7 +6,7 @@
 
     <div class="row">
         <h1 class="pull-left">Comentarios</h1>
-        <a class="btn btn-primary pull-right" style="margin-top: 25px" href="{!! route('comentarios.create') !!}">Add New</a>
+        <a class="btn btn-primary pull-right" style="margin-top: 25px" href="{!! route('comentarios.create') !!}">Agregar Nuevo</a>
     </div>
 
     <div class="row">
@@ -14,7 +14,7 @@
         <div class="well text-center">No Comentarios found.</div>
         @else {!! $comentarios->render() !!}
         <div class="table-responsive">
-            <table class="table table-striped table-bordered">
+            <table class="table-bordered table-striped">
                 <thead>
                     <th>Fecha</th>
                     <th>Avance</th>

@@ -68,7 +68,7 @@
           <div class="modal-footer">
               <!--- Submit Field --->
                 <!--<div class="form-group col-sm-12">-->
-                <!--    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}-->
+                <!--    {!! Form::submit('Grabar', ['class' => 'btn btn-primary']) !!}-->
                 <!--</div>-->
             <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
             <button type="submit" class="btn btn-primary">Grabar Comentarios</button>
