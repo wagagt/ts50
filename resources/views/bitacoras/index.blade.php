@@ -15,7 +15,8 @@
             @if($bitacoras->isEmpty())
                 <div class="well text-center">No Bitacoras found.</div>
             @else
-                <table class="table">
+                <div class="table-responsive">
+                <table class="table table-striped table-bordered">
                     <thead>
             			<th>Usuario</th>
             			<th>Acción</th>
@@ -36,6 +37,7 @@
                     @endforeach
                     </tbody>
                 </table>
+                </div>
             @endif
         </div>
     </div>

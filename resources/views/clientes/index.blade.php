@@ -15,14 +15,15 @@
             @if($clientes->isEmpty())
                 <div class="well text-center">No Clientes found.</div>
             @else
-                <table class="table">
+                <div class="table-responsive">
+                <table class="table-bordered table-striped">
                     <thead>
                     <th>Nombre</th>
-			<th>Contacto Nombres</th>
-			<th>Contacto Apellidos</th>
-			<th>Telefono</th>
-			<th>Direccion</th>
-			<th>Email</th>
+        			<th>Contacto Nombres</th>
+        			<th>Contacto Apellidos</th>
+        			<th>Telefono</th>
+        			<th>Direccion</th>
+        			<th>Email</th>
                     <th width="50px">Action</th>
                     </thead>
                     <tbody>
@@ -30,11 +31,11 @@
                     @foreach($clientes as $clientes)
                         <tr>
                             <td>{!! $clientes->nombre !!}</td>
-					<td>{!! $clientes->contacto_nombres !!}</td>
-					<td>{!! $clientes->contacto_apellidos !!}</td>
-					<td>{!! $clientes->telefono !!}</td>
-					<td>{!! $clientes->direccion !!}</td>
-					<td>{!! $clientes->email !!}</td>
+        					<td>{!! $clientes->contacto_nombres !!}</td>
+        					<td>{!! $clientes->contacto_apellidos !!}</td>
+        					<td>{!! $clientes->telefono !!}</td>
+        					<td>{!! $clientes->direccion !!}</td>
+        					<td>{!! $clientes->email !!}</td>
                             <td>
                                 <a href="{!! route('clientes.edit', [$clientes->id]) !!}"><i class="fa fa-pencil-square-o"></i></a>
                                 <a href="{!! route('clientes.delete', [$clientes->id]) !!}" onclick="return confirm('Está seguro de eliminar éste registro - Clientes?')"><i class="fa fa-trash"></i></a>
@@ -43,6 +44,7 @@
                     @endforeach
                     </tbody>
                 </table>
+                </div>
             @endif
         </div>
     </div>
