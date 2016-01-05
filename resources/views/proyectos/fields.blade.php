@@ -10,6 +10,12 @@
     {!! Form::text('profundidad', null, ['class' => 'form-control']) !!}
 </div>
 
+<!--- Diametro Field --->
+<div class="form-group col-sm-6 col-lg-4">
+    {!! Form::label('diametro', 'Diámetro (pulg):') !!}
+    {!! Form::text('diametro', null, ['class' => 'form-control']) !!}
+</div>
+
 <!--- Perforado Field --->
 <div class="form-group col-sm-6 col-lg-4">
     {!! Form::label('perforado', 'Perforado:') !!}

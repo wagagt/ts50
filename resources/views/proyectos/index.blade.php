@@ -19,8 +19,9 @@
                     <th>Nombre</th>
                     <th>Profundidad</th>
                     <th>Perforado</th>
-                    <th>Maquina</th>
-                    <th>Metodo</th>
+                    <th>Máquina</th>
+                    <th>Método</th>
+                    <th>Diámetro</th>
                     <th>Observaciones</th>
                     <th>Cliente</th>
                     <th>Estado</th>
@@ -35,6 +36,7 @@
                         <td>{!! $proyectos->perforado !!}</td>
                         <td>{!! $proyectos->maquina !!}</td>
                         <td>{!! $proyectos->metodo !!}</td>
+                        <td>{!! $proyectos->diametro !!} pulg.</td>
                         <td>{!! $proyectos->observaciones !!}</td>
                         <td>{!! $proyectos->cliente->nombre !!}</td>
                         <td>{!! $proyectos->estado->descripcion !!}</td>
