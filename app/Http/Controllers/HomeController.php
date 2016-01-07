@@ -39,7 +39,7 @@ class HomeController extends Controller {
 			//dd(\Auth::user());
 			$proyectos = \DB::table('proyectos')->where('id_cliente',\Auth::user()->id_cliente)->get();
 			//dd($proyectos);
-			return view('clients.home')
+			return view('clientes.home')
 			->with('proyectos',$proyectos)
 			->with('title','Control Panel')
 			->with('subTitle', 'Dashboard');

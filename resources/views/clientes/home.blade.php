@@ -14,13 +14,15 @@
             @if(!$proyectos)
                 <div class="well text-center">No Proyectos found.</div>
             @else
-                <table class="table">
+                <div class="table-responsive">
+                <table class="table table-striped table-bordered">
                     <thead>
                     <th>Nombre</th>
         			<th>Profundidad</th>
         			<th>Perforado</th>
         			<th>Maquina</th>
-        			<th>Metodo</th>
+        			<th>Diámetro</th>
+        			<th>Método</th>
         			<th>Observaciones</th>
                     </thead>
                     <tbody>
@@ -31,12 +33,14 @@
         					<td>{!! $proyecto->profundidad !!}</td>
         					<td>{!! $proyecto->perforado !!}</td>
         					<td>{!! $proyecto->maquina !!}</td>
+        					<td>{!! $proyecto->diametro !!} pulg.</td>
         					<td>{!! $proyecto->metodo !!}</td>
         					<td>{!! $proyecto->observaciones !!}</td>
                         </tr>
                     @endforeach
                     </tbody>
                 </table>
+            </div>
             @endif
         </div>
     </div>
