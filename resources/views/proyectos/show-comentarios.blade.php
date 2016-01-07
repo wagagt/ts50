@@ -19,7 +19,7 @@
                         <td>{{$comentario->avance}}</td>
                         <td>{{$comentario->horas}}</td>
                         <td>
-                            <textarea rows="2" class="form-control col-sm-4 col-lg-6">w{{$comentario->comentario}}</textarea>
+                            {{$comentario->comentario}}
                         </td>
                     </tr>
                     @endforeach

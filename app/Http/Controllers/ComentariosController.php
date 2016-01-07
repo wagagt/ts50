@@ -111,7 +111,7 @@ class ComentariosController extends AppBaseController
 	{
 		$comentarios = $this->comentariosRepository->findComentariosById($id);
 		/* Add select options */
-		$proyectos_options = $this->proyectosRepository->optionsList();
+		$proyectos_options = $this->proyectosRepository->optionList();
 
 		if(empty($comentarios))
 		{

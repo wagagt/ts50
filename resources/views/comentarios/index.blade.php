@@ -13,14 +13,14 @@
         @if($comentarios->isEmpty())
         <div class="well text-center">No Comentarios found.</div>
         @else {!! $comentarios->render() !!}
-        <div class="table-responsive">
-            <table class="table-bordered table-striped">
+        <div class="alt-table-responsive">
+            <table class="table table-striped table-bordered" >
                 <thead>
                     <th>Fecha</th>
                     <th>Avance</th>
                     <th>Horas</th>
                     <th>Comentario</th>
-                    <th>Action</th>
+                    <th width="50px">Action</th>
                 </thead>
                 <tbody>
                     @foreach($comentarios as $comentario)
@@ -29,7 +29,7 @@
                         <td>{{$comentario->avance}}</td>
                         <td>{{$comentario->horas}}</td>
                         <td>
-                            <textarea rows="2" cols="50">{{$comentario->comentario}}</textarea>
+                            <textarea rows="3" cols="50" disabled>{{$comentario->comentario}}</textarea>
                         </td>
                         <td>
                             <a href="{!! route('comentarios.edit', [$comentario->id]) !!}"><i class="fa fa-pencil-square-o"></i></a>
