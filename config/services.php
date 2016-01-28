@@ -16,7 +16,9 @@ return [
 
 	'mailgun' => [
 		'domain' => '',
-		'secret' => '',
+		'secret' => ''
+		//'domain' => 'wilvergonzalez.delta',
+		//'secret' => 'key-fcf6725243905355b8f6647d57675249',
 	],
 
 	'mandrill' => [

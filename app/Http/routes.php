@@ -85,3 +85,15 @@ Route::group(['middleware' => 'auth'], function() {
         'uses' => 'BitacoraController@destroy',
     ]);
 }); //middleware auth    
+
+Route::get('sendemail', function () {
+    $data = array(
+        'name' => "Learning Laravel",
+    );
+    //dd('llego a la ruta');
+    Mail::send('emails.welcome', $data, function ($message) {
+        $message->from('info@tierrasegura.com', 'Notificación Tierrasegura.com');
+        $message->to('wagagt@gmail.com')->subject('Test envio de notificaciones por mail...');
+    });
+    return "Your email has been sent successfully";
+});
