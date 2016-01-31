@@ -14,6 +14,20 @@
         <div class="well text-center">No Proyectos found.</div>
         @else
         <div class="table-responsive">
+            <div class="row col-md-12">
+                    <div class="col-md-2">
+                        <h4><a href="#" class="btn btn-primary-tab">Ingresado <i class="fa fa-sign-in"></i></a></h4>
+                    </div>
+                    <div class="col-md-2">
+                        <h4><a href="#" class="btn btn-info">Trabajando <i class="fa fa-building"></i></a></h4>
+                    </div>
+                    <div class="col-md-2">
+                        <h4><a href="#" class="btn btn-warning">Suspendido  <i class="fa fa-pause"></i></a></h4>
+                    </div>
+                    <div class="col-md-2">
+                        <h4><a href="#" class="btn btn-danger"> Terminado  <i class="fa fa-stop"></i></a></h4>
+                    </div>
+            </div>
             <table class="table table-striped table-bordered">
                 <thead>
                     <th class="text-center">Nombre</th>
@@ -31,15 +45,34 @@
 
                     @foreach($proyectos as $proyectos)
                     <tr>
-                        <td><a href="proyectos/{!! $proyectos->id !!}">{!! $proyectos->nombre !!} </a></td>
-                        <td class="text-center">{!! $proyectos->profundidad !!}</td>
-                        <td>{!! $proyectos->perforado !!}</td>
-                        <td>{!! $proyectos->maquina !!}</td>
-                        <td class="text-justify">{!! $proyectos->metodo !!}</td>
-                        <td class="text-center">{!! $proyectos->diametro !!} pulg.</td>
-                        <td class="text-left">{!! $proyectos->observaciones !!}</td>
-                        <td>{!! $proyectos->cliente->nombre !!}</td>
-                        <td class="text-justify">{!! $proyectos->estado->descripcion !!}</td>
+                        <?php
+                          $status = $proyectos->id_estado;
+                          switch($status)
+                          {
+                              case 1:
+                                    $colors = 'table-in';
+                                    break;
+                              case 2: 
+                                    $colors = 'table-info';
+                                    break;
+                              case 3:
+                                    $colors = 'table-warning';
+                                    break;
+                              case 4:
+                                    $colors = 'table-danger';
+                                    break;
+                          }
+                            
+                        ?>
+                        <td class="{!! $colors !!} td-style-proy"><a href="proyectos/{!! $proyectos->id !!}">{!! $proyectos->nombre !!} </a></td>
+                        <td class="text-center {!! $colors !!}">{!! $proyectos->profundidad !!}</td>
+                        <td class="{!! $colors !!}">{!! $proyectos->perforado !!}</td>
+                        <td class="{!! $colors !!}">{!! $proyectos->maquina !!}</td>
+                        <td class="text-justify {!! $colors !!}">{!! $proyectos->metodo !!}</td>
+                        <td class="text-center {!! $colors !!}">{!! $proyectos->diametro !!} pulg.</td>
+                        <td class="text-left {!! $colors !!}">{!! $proyectos->observaciones !!}</td>
+                        <td class="{!! $colors !!}">{!! $proyectos->cliente->nombre !!}</td>
+                        <td class="text-justify {!! $colors !!}">{!! $proyectos->estado->descripcion !!}</td>
 
                         <td class="td-style-projects text-center">
                             <a href="proyectos/{!! $proyectos->id !!}" class="btn btn-info"> <i class="fa fa-comments-o"> Comentarios </i></a>

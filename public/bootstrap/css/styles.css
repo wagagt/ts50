@@ -2,6 +2,80 @@
     width:20%;
 }
 
+.td-style-proy{
+    width:10%;
+}
+
 .td-style-projects{
     width:30%;
 }
+
+.btn-primary-tab{
+    
+    background-color:#D6D470;
+    color:#000;
+}
+
+.btn-primary-tab:hover{
+    
+    background-color:#C4C367;
+    color:#000;
+}
+
+
+.btn-final{
+    background-color:#dd4b39;
+    color: #fff;
+}
+
+
+.btn-final:hover{
+    background-color:#CF4635;
+    color: #fff;
+}
+
+
+
+/* table colors from projects status */
+
+
+.table-in{
+    background-color:#D6D470;
+    color:#000;
+    text-decoration:none;
+}
+
+.table-in a{
+    color:#000;
+}
+
+
+
+.table-info{
+    
+    background-color:#00acd6;
+    color:#fff;
+}
+
+.table-info a, .table-warning a, .table-danger a{
+    color:#000;
+}
+
+.table-warning{
+    
+    background-color:#f39c12;
+    color:#fff;
+    
+}
+
+
+
+.table-danger{
+    
+    background-color:#dd4b39;
+    color:#fff;
+    
+}
+
+
+

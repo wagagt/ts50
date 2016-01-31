@@ -25,4 +25,5 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <link  href="{{ asset('/bootstrap/css/styles.css') }}"  rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="bootstrap/css/fontawesome.min.css">
 </head>
