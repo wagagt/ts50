@@ -21,7 +21,7 @@
             			<th>Usuario</th>
             			<th>Acción</th>
             			<th>Fecha</th>
-                        <th width="50px">Action</th>
+                        <th class="td-style">Action</th>
                     </thead>
                     <tbody>
                     @foreach($bitacoras as $bitacora)
@@ -29,9 +29,9 @@
         					<td>{!! $bitacora->usuario->name !!}</td>
         					<td>{!! $bitacora->accion !!}</td>
         					<td>{!! $bitacora->created_at !!}</td>
-                            <td>
-                                <a href="{!! route('bitacoras.edit', [$bitacora->id]) !!}"><i class="fa fa-pencil-square-o"></i></a>
-                                <a href="{!! route('bitacoras.delete', [$bitacora->id]) !!}" onclick="return confirm('Está seguro de eliminar éste registro - Bitacora?')"><i class="fa fa-trash"></i></a>
+                            <td class="td-style text-center">
+                                <a href="{!! route('bitacoras.edit', [$bitacora->id]) !!}" class="btn btn-warning"><i class="fa fa-pencil-square-o"> Editar</i></a>
+                                <a href="{!! route('bitacoras.delete', [$bitacora->id]) !!}" class="btn btn-danger" onclick="return confirm('Está seguro de eliminar éste registro - Bitacora?')"><i class="fa fa-trash"> Eliminar</i></a>
                             </td>
                         </tr>
                     @endforeach

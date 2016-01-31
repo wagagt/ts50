@@ -17,16 +17,16 @@
             <table class="table table-striped table-bordered">
                 <thead>
                     <th>Descripcion</th>
-                    <th width="50px">Action</th>
+                    <th class="td-style text-center">Action</th>
                 </thead>
                 <tbody>
 
                     @foreach($estados as $estados)
                     <tr>
                         <td>{!! $estados->descripcion !!}</td>
-                        <td>
-                            <a href="{!! route('estados.edit', [$estados->id]) !!}"><i class="fa fa-pencil-square-o"></i></a>
-                            <a href="{!! route('estados.delete', [$estados->id]) !!}" onclick="return confirm('Está seguro de eliminar éste registro - Estados?')"><i class="fa fa-trash"></i></a>
+                        <td class="td-style text-center">
+                            <a href="{!! route('estados.edit', [$estados->id]) !!}" class="btn btn-warning"><i class="fa fa-pencil-square-o"> Editar</i></a>
+                            <a href="{!! route('estados.delete', [$estados->id]) !!}" class="btn btn-danger" onclick="return confirm('Está seguro de eliminar éste registro - Estados?')"><i class="fa fa-trash"> Eliminar</i></a>
                         </td>
                     </tr>
                     @endforeach

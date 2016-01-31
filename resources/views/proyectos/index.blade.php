@@ -16,35 +16,35 @@
         <div class="table-responsive">
             <table class="table table-striped table-bordered">
                 <thead>
-                    <th>Nombre</th>
-                    <th>Profundidad</th>
-                    <th>Perforado</th>
-                    <th>Máquina</th>
-                    <th>Método</th>
-                    <th>Diámetro</th>
-                    <th>Observaciones</th>
-                    <th>Cliente</th>
-                    <th>Estado</th>
-                    <th width="50px">Action</th>
+                    <th class="text-center">Nombre</th>
+                    <th class="text-center">Profundidad</th>
+                    <th class="text-center">Perforado</th>
+                    <th class="text-center">Máquina</th>
+                    <th class="text-center">Método</th>
+                    <th class="text-center">Diámetro</th>
+                    <th class="text-center">Observaciones</th>
+                    <th class="text-center">Cliente</th>
+                    <th class="text-center">Estado</th>
+                    <th class="td-style-projects text-center">Action</th>
                 </thead>
                 <tbody>
 
                     @foreach($proyectos as $proyectos)
                     <tr>
                         <td><a href="proyectos/{!! $proyectos->id !!}">{!! $proyectos->nombre !!} </a></td>
-                        <td>{!! $proyectos->profundidad !!}</td>
+                        <td class="text-center">{!! $proyectos->profundidad !!}</td>
                         <td>{!! $proyectos->perforado !!}</td>
                         <td>{!! $proyectos->maquina !!}</td>
-                        <td>{!! $proyectos->metodo !!}</td>
-                        <td>{!! $proyectos->diametro !!} pulg.</td>
-                        <td>{!! $proyectos->observaciones !!}</td>
+                        <td class="text-justify">{!! $proyectos->metodo !!}</td>
+                        <td class="text-center">{!! $proyectos->diametro !!} pulg.</td>
+                        <td class="text-left">{!! $proyectos->observaciones !!}</td>
                         <td>{!! $proyectos->cliente->nombre !!}</td>
-                        <td>{!! $proyectos->estado->descripcion !!}</td>
+                        <td class="text-justify">{!! $proyectos->estado->descripcion !!}</td>
 
-                        <td>
-                            <a href="proyectos/{!! $proyectos->id !!}"> <i class="fa fa-comments-o"></i></a>
-                            <a href="{!! route('proyectos.edit', [$proyectos->id]) !!}"><i class="fa fa-pencil-square-o"></i></a>
-                            <a href="{!! route('proyectos.delete', [$proyectos->id]) !!}" onclick="return confirm('Está seguro de eliminar éste registro - Proyectos?')"><i class="fa fa-trash"></i></a>
+                        <td class="td-style-projects text-center">
+                            <a href="proyectos/{!! $proyectos->id !!}" class="btn btn-info"> <i class="fa fa-comments-o"> Comentarios </i></a>
+                            <a href="{!! route('proyectos.edit', [$proyectos->id]) !!}" class="btn btn-warning"><i class="fa fa-pencil-square-o"> Editar</i></a>
+                            <a href="{!! route('proyectos.delete', [$proyectos->id]) !!}" class="btn btn-danger" onclick="return confirm('Está seguro de eliminar éste registro - Proyectos?')"><i class="fa fa-trash"> Elimiar</i></a>
                         </td>
                     </tr>
                     @endforeach

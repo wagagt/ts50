@@ -22,7 +22,7 @@
                     <th>Email</th>
                     <th>Id Rol</th>
                     <th>Id Cliente</th>
-                    <th class="td-style-user">Action</th>
+                    <th class="td-style">Action</th>
                 </thead>
                 <tbody>
 
@@ -34,7 +34,7 @@
                         <td>{!! $users->email !!}</td>
                         <td>{!! $users->rol->descripcion !!}</td>
                         <td>{!! $users->cliente->nombre !!}</td>
-                        <td class="td-style-user">
+                        <td class="td-style text-center">
                             <a href="{!! route('users.edit', [$users->id]) !!}" class="btn btn-warning"><i class="fa fa-pencil-square-o"> Editar</i></a>
                             <a href="{!! route('users.delete', [$users->id]) !!}" class="btn btn-danger" onclick="return confirm('Está seguro de eliminar éste registro - Users?')"><i class="fa fa-trash"> Eliminar</i></a>
                         </td>

@@ -22,7 +22,7 @@
                     <th>Telefono</th>
                     <th>Direccion</th>
                     <th>Email</th>
-                    <th width="50px">Action</th>
+                    <th class="td-style">Action</th>
                 </thead>
                 <tbody>
 
@@ -34,9 +34,9 @@
                         <td>{!! $clientes->telefono !!}</td>
                         <td>{!! $clientes->direccion !!}</td>
                         <td>{!! $clientes->email !!}</td>
-                        <td>
-                            <a href="{!! route('clientes.edit', [$clientes->id]) !!}"><i class="fa fa-pencil-square-o"></i></a>
-                            <a href="{!! route('clientes.delete', [$clientes->id]) !!}" onclick="return confirm('Está seguro de eliminar éste registro - Clientes?')"><i class="fa fa-trash"></i></a>
+                        <td class="td-style text-center">
+                            <a href="{!! route('clientes.edit', [$clientes->id]) !!}" class="btn btn-warning"><i class="fa fa-pencil-square-o"> Editar</i></a>
+                            <a href="{!! route('clientes.delete', [$clientes->id]) !!}" class="btn btn-danger" onclick="return confirm('Está seguro de eliminar éste registro - Clientes?')"><i class="fa fa-trash"> Eliminar</i></a>
                         </td>
                     </tr>
                     @endforeach
