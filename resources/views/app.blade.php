@@ -27,7 +27,7 @@ desired effect
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
 -->
-<body class="skin-blue sidebar-mini">
+<body class="skin-blue sidebar-mini sidebar-collapse ">
 <div class="wrapper">
 
     @include('partials.mainheader')
@@ -35,7 +35,7 @@ desired effect
     @include('partials.sidebar')
 
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
+    <div class="content-wrapper ">
 
         @include('partials.contentheader')
 
