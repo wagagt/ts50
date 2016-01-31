@@ -5,7 +5,7 @@
     @include('flash::message')
 
     <div class="row">
-        <h1 class="pull-left">Usuarios</h1>
+        <h1 class="pull-left">Usuario</h1>
         <a class="btn btn-primary pull-right" style="margin-top: 25px" href="{!! route('usuarios.create') !!}">Agregar Nuevo</a>
     </div>
 
@@ -23,7 +23,7 @@
                     <th>Id Rol</th>
                     <th>Id Cliente</th>
                     <th>Id Cliente</th>
-                    <th width="50px">Action</th>
+                    <th width="50px">Actionsxxx</th>
                 </thead>
                 <tbody>
 
@@ -36,8 +36,8 @@
                         <td>{!! $usuarios->id_rol !!}</td>
                         <td>{!! $usuarios->id_cliente !!}</td>
                         <td>{!! $usuarios->id_cliente !!}</td>
-                        <td>
-                            <a href="{!! route('usuarios.edit', [$usuarios->id]) !!}"><i class="fa fa-pencil-square-o"></i></a>
+                        <td width="150px">
+                            <a href="{!! route('usuarios.edit', [$usuarios->id]) !!}"><i class="fa fa-pencil-square-o"></i> Editar</a>
                             <a href="{!! route('usuarios.delete', [$usuarios->id]) !!}" onclick="return confirm('Está seguro de eliminar éste registro - Usuarios?')"><i class="fa fa-trash"></i></a>
                         </td>
                     </tr>
