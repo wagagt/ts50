@@ -52,11 +52,6 @@
                 <i class="fa fa-comments-o"></i> <span>Admin. Comentarios</span> 
                 </a>
             </li>
-            <li>
-                <a href="/bitacoras">
-                <i class="fa fa-history"></i> <span>Admin. Bitácoras</span> 
-                </a>
-            </li>
             <li class="treeview">
                 <a href="#">
                 <i class="fa fa-dashboard"></i> <span>Catálogos Internos</span> 
