@@ -36,11 +36,11 @@
                     <th class="text-center">Máquina</th>
                     <th class="text-center">Método</th>
                     <th class="text-center">Diámetro</th>
-                    <th class="text-center">Observaciones</th>
                     <th class="text-center">Cliente</th>
                     <th class="text-center">Estado</th>
                     <th class="td-style-projects text-center">Action</th>
                 </thead>
+
                 <tbody>
 
                     @foreach($proyectos as $proyectos)
@@ -70,7 +70,6 @@
                         <td class="{!! $colors !!}">{!! $proyectos->maquina !!}</td>
                         <td class="text-justify {!! $colors !!}">{!! $proyectos->metodo !!}</td>
                         <td class="text-center {!! $colors !!}">{!! $proyectos->diametro !!} pulg.</td>
-                        <td class="text-left {!! $colors !!}">{!! $proyectos->observaciones !!}</td>
                         <td class="{!! $colors !!}">{!! $proyectos->cliente->nombre !!}</td>
                         <td class="text-justify {!! $colors !!}">{!! $proyectos->estado->descripcion !!}</td>
 
@@ -80,6 +79,12 @@
                             <a href="{!! route('proyectos.delete', [$proyectos->id]) !!}" class="btn btn-danger" onclick="return confirm('Está seguro de eliminar éste registro - Proyectos?')"><i class="fa fa-trash"> Elimiar</i></a>
                         </td>
                     </tr>
+                    <tr>
+                        <td class="text-right {!! $colors !!}" >Observaciones</td>
+                        <td class="text-left {!! $colors !!}" colspan="7" >{!! $proyectos->observaciones !!}</td>
+                    </tr>
+                    <tr><td colspan="9"><td></tr>
+                        
                     @endforeach
                 </tbody>
             </table>
