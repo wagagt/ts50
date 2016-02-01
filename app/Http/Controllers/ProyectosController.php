@@ -27,7 +27,7 @@ class ProyectosController extends AppBaseController
 		$this->clientesRepository  	= $clientesRepo;
 		$this->estadosRepository  	= $estadosRepo;
 		$this->maquina_options		= ['M-3' => 'M-3','M-4' => 'M-4','M-5' => 'M-5','M-6' => 'M-6',
-		'M-7' => 'M-7', 'M-8' => 'M-8', 'M-9' => 'M-9', 'M-10' => 'M-10', 'M-11' => 'M-11'];
+		'M-7' => 'M-7', 'M-8' => 'M-8', 'M-9' => 'M-9', 'M-10' => 'M-10', 'M-11' => 'M-11', 'M-12' => 'M-12', 'M-13' => 'M-13']; 
 		$this->metodo_options		= ['Rotativo' => 'Rotativo', 'Percusión' => 'Percusión', 
 		'Roto-Percusión' => 'Roto-Percusión'];
 	}
