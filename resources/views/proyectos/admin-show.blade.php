@@ -12,13 +12,12 @@
         <div class="panel-heading row-fluid ">
                     <h3>Avances</h3>
         </div>
-        <br>
-        <div class="col-md-6">
+        <div class="panel-body">
+            <!--<div class="col-md-6">-->
                 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
                  <i class="fa fa-comments-o"></i> Agregar Comentarios
                 </button>
-        </div>
-        <div class="panel-body">
+            <!--</div>-->
             <div>
                 @include('proyectos.show-comentarios')
             </div>
