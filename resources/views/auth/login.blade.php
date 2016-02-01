@@ -54,8 +54,8 @@
 								<button type="submit" class="btn btn-primary" style="margin-right: 15px;">
 									Login
 								</button>
-
-								<a href="/password/email">Forgot Your Password?</a>
+								<br><br>Tiene algun problema?<br>
+								<a href="mailto:admin@suwebmaster.net"> Escriba al Webmaster.</a>
 							</div>
 						</div>
 					</form>
