@@ -8,8 +8,8 @@
                         <th>Fecha</th>
                         <th>Horas</th>
                         <th>Avance</th>
-                        <th>Prof.<br>Inicial</th>
-                        <th>Prof.<br>Final</th>
+                        <th>Prof.<br>Inicial(pies)</th>
+                        <th>Prof.<br>Final(pies)</th>
                         <th>Comentario</th>
                     </tr>
                 </thead>

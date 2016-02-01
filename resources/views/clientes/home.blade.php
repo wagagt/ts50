@@ -30,7 +30,7 @@
                     @foreach($proyectos as $proyecto)
                         <tr>
                             <td><a href="proyectos/{!! $proyecto->id !!}">{!! $proyecto->nombre !!} </a></td>
-        					<td>{!! $proyecto->profundidad !!}</td>
+        					<td>{!! $proyecto->profundidad !!}(pies)</td>
         					<td>{!! $proyecto->perforado !!}</td>
         					<td>{!! $proyecto->maquina !!}</td>
         					<td>{!! $proyecto->diametro !!} pulg.</td>

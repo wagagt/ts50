@@ -6,7 +6,7 @@
 
 <!--- Profundidad Field --->
 <div class="form-group col-sm-6 col-lg-4">
-    {!! Form::label('profundidad', 'Profundidad:') !!}
+    {!! Form::label('profundidad', 'Profundidad (pies):') !!}
     {!! Form::text('profundidad', null, ['class' => 'form-control']) !!}
 </div>
 

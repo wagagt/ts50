@@ -2,7 +2,7 @@
 <!--- Profundidad Field --->
 <div class="form-group col-sm-6 col-lg-4 col-xs-6">
     {!! Form::label('profundidad', 'Profundidad:') !!}
-    {!! $proyecto->profundidad !!}
+    {!! $proyecto->profundidad !!}(pies)
 </div>
 
 <!--- Perforado Field --->

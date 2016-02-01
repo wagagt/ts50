@@ -65,7 +65,7 @@
                             
                         ?>
                         <td class="{!! $colors !!} td-style-proy"><a href="proyectos/{!! $proyectos->id !!}">{!! $proyectos->nombre !!} </a></td>
-                        <td class="text-center {!! $colors !!}">{!! $proyectos->profundidad !!}</td>
+                        <td class="text-center {!! $colors !!}">{!! $proyectos->profundidad !!}(pies)</td>
                         <td class="{!! $colors !!}">{!! $proyectos->perforado !!}</td>
                         <td class="{!! $colors !!}">{!! $proyectos->maquina !!}</td>
                         <td class="text-justify {!! $colors !!}">{!! $proyectos->metodo !!}</td>
