@@ -48,8 +48,8 @@
                 </a>
             </li>
             <li>
-                <a href="/comentarios">
-                <i class="fa fa-comments-o"></i> <span>Admin. Comentarios</span> 
+                <a href="/bitacoras">
+                <i class="fa fa-history"></i> <span>Admin. Bitácoras</span> 
                 </a>
             </li>
             <li class="treeview">
