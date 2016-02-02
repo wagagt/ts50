@@ -18,13 +18,13 @@
                         <h4><a href="#" class="btn btn-primary-tab">Ingresado <i class="fa fa-sign-in"></i></a></h4>
                     </div>
                     <div class="col-md-2">
-                        <h4><a href="#" class="btn btn-info">Trabajando <i class="fa fa-building"></i></a></h4>
+                        <h4><a href="#" class="btn btn-work">Trabajando <i class="fa fa-building"></i></a></h4>
                     </div>
                     <div class="col-md-2">
-                        <h4><a href="#" class="btn btn-warning">Suspendido  <i class="fa fa-pause"></i></a></h4>
+                        <h4><a href="#" class="btn btn-suspend">Suspendido  <i class="fa fa-pause"></i></a></h4>
                     </div>
                     <div class="col-md-2">
-                        <h4><a href="#" class="btn btn-danger"> Terminado  <i class="fa fa-stop"></i></a></h4>
+                        <h4><a href="#" class="btn btn-final"> Terminado  <i class="fa fa-stop"></i></a></h4>
                     </div>
             </div>
             <table class="table table-striped table-bordered">
@@ -52,10 +52,10 @@
                                     $colors = 'table-in';
                                     break;
                               case 2: 
-                                    $colors = 'table-info';
+                                    $colors = 'table-work';
                                     break;
                               case 3:
-                                    $colors = 'table-warning';
+                                    $colors = 'table-suspend';
                                     break;
                               case 4:
                                     $colors = 'table-danger';
