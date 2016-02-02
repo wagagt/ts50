@@ -7,6 +7,7 @@ use App\Libraries\Repositories\ProyectosRepository;
 use App\Libraries\Repositories\ClientesRepository;
 use App\Libraries\Repositories\EstadosRepository;
 use Mitul\Controller\AppBaseController;
+use App\Models\Proyectos;
 use Response;
 use Flash;
 
@@ -44,11 +45,11 @@ class ProyectosController extends AppBaseController
 	    $input = $request->all();
 
 		$result = $this->proyectosRepository->search($input);
-
-		$proyectos = $result[0];
-
 		$attributes = $result[1];
-
+		//$proyectos = $result[0];
+		$proyectos = Proyectos::with('cliente')->orderBy('id_estado','asc')->get();
+		//$proyectos 	= \DB::table('proyectos')->with('client')->orderBy('id_estado','asc')->get();
+		//dd(count($proyectos));
 		return view('proyectos.index')
 		    ->with('proyectos', $proyectos)
 		    ->with('attributes', $attributes);;
@@ -110,7 +111,7 @@ class ProyectosController extends AppBaseController
 		}
 		
  			$isAdmin 		= (\Auth::user()->id_rol == 1 )? 'true' : 'false';
-			$proyectos 		= \DB::table('proyectos')->where('id_cliente',\Auth::user()->id_cliente)->get();
+			$proyectos 		= \DB::table('proyectos')->where('id_cliente',\Auth::user()->id_cliente)->orderBy('id_estado','asc')->get();
 			$comentarios 	= \DB::table('comentarios')->where('id_proyecto', $id)->orderBy('created_at', 'asc')->get();
 			//dd($comentarios);
 			//$comentarios->setPath('http://ts50-wagagt.c9.io/proyectos/'.$id);

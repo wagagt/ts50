@@ -8,9 +8,8 @@
         <h1 class="pull-left">Proyectos</h1>
         <a class="btn btn-primary pull-right" style="margin-top: 25px" href="{!! route('proyectos.create') !!}">Agregar Nuevo</a>
     </div>
-
     <div class="row">
-        @if($proyectos->isEmpty())
+        @if(count($proyectos)<1)
         <div class="well text-center">No Proyectos found.</div>
         @else
         <div class="table-responsive">
@@ -64,6 +63,7 @@
                           }
                             
                         ?>
+                        
                         <td class="{!! $colors !!} td-style-proy"><a href="proyectos/{!! $proyectos->id !!}">{!! $proyectos->nombre !!} </a></td>
                         <td class="text-center {!! $colors !!}">{!! $proyectos->profundidad !!}(pies)</td>
                         <td class="{!! $colors !!}">{!! $proyectos->perforado !!}</td>
@@ -72,7 +72,6 @@
                         <td class="text-center {!! $colors !!}">{!! $proyectos->diametro !!} pulg.</td>
                         <td class="{!! $colors !!}">{!! $proyectos->cliente->nombre !!}</td>
                         <td class="text-justify {!! $colors !!}">{!! $proyectos->estado->descripcion !!}</td>
-
                         <td class="td-style-projects text-center">
                             <a href="proyectos/{!! $proyectos->id !!}" class="btn btn-info"> <i class="fa fa-comments-o"> Comentarios </i></a>
                             <a href="{!! route('proyectos.edit', [$proyectos->id]) !!}" class="btn btn-warning"><i class="fa fa-pencil-square-o"> Editar</i></a>
