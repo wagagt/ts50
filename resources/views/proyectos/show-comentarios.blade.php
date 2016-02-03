@@ -24,7 +24,7 @@
                     ?>
                     <tr>
                         <td>
-                        {{ date('d/m/Y',strtotime($comentario->created_at)) }}
+                        {{ date('d/m/Y',strtotime($comentario->fecha)) }}
                         </td>
                         <td>{{$comentario->horas}}</td>
                         <td>{{$comentario->avance}}</td>

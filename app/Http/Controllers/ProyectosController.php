@@ -112,7 +112,7 @@ class ProyectosController extends AppBaseController
 		
  			$isAdmin 		= (\Auth::user()->id_rol == 1 )? 'true' : 'false';
 			$proyectos 		= \DB::table('proyectos')->where('id_cliente',\Auth::user()->id_cliente)->orderBy('id_estado','asc')->get();
-			$comentarios 	= \DB::table('comentarios')->where('id_proyecto', $id)->orderBy('created_at', 'asc')->get();
+			$comentarios 	= \DB::table('comentarios')->where('id_proyecto', $id)->orderBy('fecha', 'asc')->get();
 			//dd($comentarios);
 			//$comentarios->setPath('http://ts50-wagagt.c9.io/proyectos/'.$id);
 			//$comentarios->setPath($request->url());

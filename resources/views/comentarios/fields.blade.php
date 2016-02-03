@@ -1,5 +1,11 @@
 <!--- Avance Field --->
 <div class="form-group col-sm-6 col-lg-4">
+    {!! Form::label('fecha', 'Fecha:') !!}
+    {!! Form::text('fecha', null, ['class' => 'form-control']) !!}
+</div>
+
+<!--- Avance Field --->
+<div class="form-group col-sm-6 col-lg-4">
     {!! Form::label('avance', 'Avance:') !!}
     {!! Form::text('avance', null, ['class' => 'form-control']) !!}
 </div>

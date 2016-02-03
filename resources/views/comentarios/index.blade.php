@@ -25,7 +25,7 @@
                 <tbody>
                     @foreach($comentarios as $comentario)
                     <tr>
-                        <td>{{$comentario->created_at}}</td>
+                        <td>{{$comentario->fecha}}</td>
                         <td>{{$comentario->avance}}</td>
                         <td>{{$comentario->horas}}</td>
                         <td>

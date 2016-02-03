@@ -14,6 +14,7 @@
           page. However, you can choose any other skin. Make sure you
           apply the skin class to the body tag so the changes take effect.
     -->
+    <link href="{{ asset('/css/datepicker.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('/css/skins/skin-blue.css') }}" rel="stylesheet" type="text/css" />
     <!-- iCheck -->
     <link href="{{ asset('/plugins/iCheck/square/blue.css') }}" rel="stylesheet" type="text/css" />
@@ -26,4 +27,6 @@
     <![endif]-->
     <link  href="{{ asset('/bootstrap/css/styles.css') }}"  rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="bootstrap/css/fontawesome.min.css">
+
+    
 </head>

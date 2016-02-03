@@ -15,7 +15,8 @@ class Comentarios extends Model
 	    "comentario",
 		"avance",
 		"horas",
-		"id_proyecto"
+		"id_proyecto",
+		"fecha"
 	];
 
 	public static $rules = [

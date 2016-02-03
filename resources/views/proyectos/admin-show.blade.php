@@ -38,6 +38,15 @@
           </div>
           <div class="modal-body"> 
             {!! Form::open(['route' => 'comentarios.store']) !!}
+                            <div class="row">
+                    <div class="form-group col-sm-4 col-lg-6">
+                        {!! Form::label('fecha', 'Fecha (dd-mm-yy):') !!}
+                        {!! Form::text('fecha', null, ['class' => 'form-control', 'id' => 'datepicker1']) !!}
+                    </div>
+                <!--- Horas Field --->
+                    <div class="form-group col-sm-4 col-lg-6"></div>
+                </div>
+                
                 <!--- Avance Field --->
                 <div class="row">
                     <div class="form-group col-sm-4 col-lg-6">
@@ -80,9 +89,17 @@
 @endsection
 
 @section('script')
-    <script type="text/javascript">
-      
-    </script>
+
+<script>
+  $(document).ready(function () {
+                
+                $('#datepicker1').datepicker({
+                    format: "dd/mm/yyyy"
+                });  
+            
+            });
+
+</script>
 @endsection
 
 

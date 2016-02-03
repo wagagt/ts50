@@ -56,3 +56,4 @@ desired effect
 
 </body>
 </html>
+@yield('script')
