@@ -1,6 +1,7 @@
 <?php namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Comentarios extends Model
 {
@@ -31,5 +32,10 @@ class Comentarios extends Model
 		//dd($this->belongsTo('App\Models\Roles'));
 		return $this->belongsTo('App\Models\Proyectos', 'id_proyecto');
 	}
+	
+	public function setFechaAttribute($date){
+		$this->attributes['fecha'] =  Carbon::createFromFormat('Y-m-d', $date);
+	}
 
+	
 }

@@ -14,7 +14,7 @@ class AddFechaComentariosTable extends Migration {
 	{
 		Schema::table('comentarios', function($table)
 		{
-			$table->dateTime('fecha')->nullable();
+			$table->timestamp('fecha')->nullable();
 		});
 	}
 
