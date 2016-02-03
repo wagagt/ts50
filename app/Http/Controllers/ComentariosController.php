@@ -72,8 +72,6 @@ class ComentariosController extends AppBaseController
 	public function store(CreateComentariosRequest $request)
 	{
         $input = $request->all();
-        $input["fecha"] = date('Y-m-d', strtotime($input["fecha"]));
-        //dd($input);
 		$comentarios = $this->comentariosRepository->store($input);
 		Flash::message('Comentarios agregados exitosamente.');
 
