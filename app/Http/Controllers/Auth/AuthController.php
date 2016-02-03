@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers\Auth;
 
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Auth\Registrar;
@@ -33,5 +34,28 @@ class AuthController extends Controller {
 		$this->registrar = $registrar;
 		$this->middleware('guest', ['except' => 'getLogout']);
 	}
+	
+	
+	/*
+	public function postLogin(Request $request)
+	{
+    $this->validate($request, [
+        'name' => 'required',
+        'password' => 'required',
+    ]);
+
+    $credentials = $request->only('name', 'password');
+
+    if ($this->auth->attempt($credentials, $request->has('remember')))
+    {
+        return redirect()->intended($this->redirectPath());
+    }
+
+    return redirect($this->loginPath())
+                ->withInput($request->only('name', 'remember'))
+                ->withErrors([
+                    'name' => 'These credentials do not match our records.',
+                ]);
+}*/
 
 }

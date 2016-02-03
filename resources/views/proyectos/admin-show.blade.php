@@ -41,7 +41,7 @@
                             <div class="row">
                     <div class="form-group col-sm-4 col-lg-6">
                         {!! Form::label('fecha', 'Fecha (dd-mm-yy):') !!}
-                        {!! Form::text('fecha', null, ['class' => 'form-control', 'id' => 'datepicker1']) !!}
+                        {!! Form::input('date', null, date('d-m-Y'), ['class' => 'form-control', 'id' => 'fecha']) !!}
                     </div>
                 <!--- Horas Field --->
                     <div class="form-group col-sm-4 col-lg-6"></div>
@@ -93,7 +93,7 @@
 <script>
   $(document).ready(function () {
                 
-                $('#datepicker1').datepicker({
+                $('#fecha').datepicker({
                     format: "dd/mm/yyyy"
                 });  
             

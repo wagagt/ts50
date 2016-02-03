@@ -5,11 +5,11 @@
                 <thead>
                     <tr>
                         
-                        <th>Fecha</th>
+                        <th>Fecha (d/m/a)</th>
                         <th>Horas</th>
                         <th>Avance</th>
-                        <th>Prof.<br>Inicial(pies)</th>
-                        <th>Prof.<br>Final(pies)</th>
+                        <th>Profundidad<br>Inicial (pies)</th>
+                        <th>Profundidad<br>Final (pies)</th>
                         <th>Comentario</th>
                     </tr>
                 </thead>
