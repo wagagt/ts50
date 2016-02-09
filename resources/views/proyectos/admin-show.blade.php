@@ -19,7 +19,7 @@
                 </button>
             <!--</div>-->
             <div>
-                @include('proyectos.show-comentarios')
+                @include('proyectos.admin-show-comentarios')
             </div>
         </div>
         <div class="panel-footer">
@@ -86,19 +86,52 @@
         </div>
       </div>
     </div>
-    <!-- MODAL -->        
+    <!-- MODAL -->       
+    
+    
+    <!-- MODAL EDIT -->
+    <div class="modal fade" id="myModalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel"> <p class=></p> Eliminar Comentario:  <strong></strong></h4>
+          </div>
+          <div class="modal-body"> 
+            {!! Form::open(['route' => 'comentarios.store']) !!}
+                <!--- Comentario Field --->
+                <div class="row">
+                    <div class="form-group col-sm-6 col-lg-12">
+                        {!! Form::label('comentario', 'Comentario:') !!}
+                        {!! Form::textarea('comentario_todel', null, ['class' => 'form-control col-sm-4 col-lg-6', 'size' => '50x5', 'id'=>'comentario_todel']) !!}
+                    </div>
+                </div>
+          </div>
+          <div class="modal-footer">
+              <!--- Submit Field --->
+                <!--<div class="form-group col-sm-12">-->
+                <!--    {!! Form::submit('Grabar', ['class' => 'btn btn-primary']) !!}-->
+                <!--</div>-->
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-danger">Eliminar Comentario</button>
+          </div>
+          {!! Form::close() !!}
+        </div>
+      </div>
+    </div>
+    <!-- MODAL EDIT-->  
 @endsection
 
 @section('script')
 
 <script>
- /* $(document).ready(function () {
-                
-                $('#fecha').datepicker({
-                    format: "dd/mm/yyyy"
-                });  
-            });
-*/
+$(document).ready(function () {
+    $('#modalDel').click(function (){
+        $('#myModalEdit').modal('toggle');
+        comentario_id = $(this).attr("data-id");
+        $('#comentario_todel').val($('#comentario_'+comentario_id).text());
+        }); 
+});
 </script>
 @endsection
 
