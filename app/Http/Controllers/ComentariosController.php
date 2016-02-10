@@ -157,21 +157,20 @@ class ComentariosController extends AppBaseController
 	 *
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function destroy(Request $request)
 	{
+		$input = $request->all();
+		$id = $request['comentario_id'];
+		$proyecto_id = $request['proyecto_id'];
 		$comentarios = $this->comentariosRepository->findComentariosById($id);
-
 		if(empty($comentarios))
 		{
 			Flash::error('Comentarios not found');
 			return redirect(route('comentarios.index'));
 		}
-
 		$comentarios->delete();
-
-		Flash::message('Comentarios deleted successfully.');
-
-		return redirect(route('comentarios.index'));
+		Flash::message('Comentario borrado exitosamente.');
+		return redirect()->action('ProyectosController@show', [$proyecto_id]);
 	}
 
 }

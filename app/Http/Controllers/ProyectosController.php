@@ -100,7 +100,7 @@ class ProyectosController extends AppBaseController
 	 *
 	 * @return Response
 	 */
-	public function show($id, Request $request)
+	public function show($id)
 	{
 		$proyecto = $this->proyectosRepository->findProyectosById($id);
 		//dd($proyecto);
