@@ -33,8 +33,10 @@
                         <td>{{$profundidad_final}}</td>
                         <td id="comentario_{{$comentario->id}}">{{$comentario->comentario}}</td>
                         <td>
-                            <a id="modalDel" class="btn btn-app" data-id="{{$comentario->id}}">
+                            <a id="modalDel" class="btn btn-danger" data-id="{{$comentario->id}}">
                             <i class="fa fa-trash"></i></a>
+                            <a id="modalEdit" class="btn btn-default"  data-toggle="modal" data-target=".bs-example-modal-sm">
+                            <i class="fa fa-edit"></i></a>
                         </td>
                     </tr>
                     <?php 
