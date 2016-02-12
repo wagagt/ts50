@@ -10,7 +10,7 @@
 <div class="container">
     <div class="panel panel-primary">
         <div class="panel-heading row-fluid ">
-                    <h3>Avances</h3>
+                    <h3>{!! $proyecto->nombre !!}  ->  Avances</h3>
         </div>
         <div class="panel-body">
             <!--<div class="col-md-6">-->
