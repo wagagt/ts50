@@ -86,7 +86,7 @@ class ClientesRepository
 	 */
 	public function optionList()
 	{
-		return Clientes::lists('nombre', 'id');
+		return Clientes::orderBy('nombre')->lists('nombre', 'id');
 	}
 	
 }
